@@ -1,0 +1,23 @@
+CREATE DATABASE Plataforma_Musical;
+Go
+CREATE TABLE TIPO_USUARIO (id_tipo INT IDENTITY PRIMARY KEY, nombre_tipo varchar(255));
+CREATE TABLE ESTADO(id_estado INT IDENTITY PRIMARY KEY,nombre_estado varchar(100));
+CREATE TABLE PAIS(id_pais INT IDENTITY PRIMARY KEY, nombre_pais varchar(255));
+CREATE TABLE GENERO_MUSICAL(id_genero INT IDENTITY PRIMARY KEY, nombre_genero varchar(100));
+CREATE TABLE USUARIO(id_usuario INT IDENTITY PRIMARY KEY,nombre_usuario varchar(255),contraseña varchar(255),
+estado_usuario INT, tipo_usuario INT, FOREIGN KEY(estado_usuario) REFERENCES ESTADO(id_estado), FOREIGN KEY(tipo_usuario)
+REFERENCES TIPO_USUARIO(id_tipo));
+CREATE TABLE LISTA_REPRODUCCION (id_lista_reproduccion INT IDENTITY PRIMARY KEY, nombre_lista varchar(255), usuario INT,
+FOREIGN KEY(usuario) REFERENCES USUARIO(id_usuario));
+CREATE TABLE ARTISTA(id_artista INT IDENTITY PRIMARY KEY, nombre_artista varchar(255), pais INT, descripcion varchar(255),
+foto varchar(255),usuario INT, estado_artista INT, red_social1 varchar(255), red_social2 varchar(255), red_social3 varchar(255),
+red_social4 varchar(255), red_social5 varchar(255), FOREIGN KEY(pais) REFERENCES PAIS(id_pais), FOREIGN KEY(usuario) REFERENCES
+ USUARIO(id_usuario), FOREIGN KEY(estado_artista) REFERENCES ESTADO(id_estado));
+ CREATE TABLE GENERO_ARTISTA(id_genero_artista INT IDENTITY PRIMARY KEY, artista INT, genero INT, FOREIGN KEY(artista) REFERENCES
+  ARTISTA(id_artista), FOREIGN KEY(genero) REFERENCES GENERO_MUSICAL(id_genero));
+  CREATE TABLE ALBUM (id_album INT IDENTITY PRIMARY KEY, titulo varchar(255), fecha date, reseña varchar(255), foto_portada varchar(255),
+  artista INT, estado INT, FOREIGN KEY(artista) REFERENCES ARTISTA(id_artista), FOREIGN KEY(estado) REFERENCES ESTADO(id_estado));
+  CREATE TABLE CANCION (id_cancion INT IDENTITY PRIMARY KEY, nombre_cancion varchar(255), duracion varchar(255),album int, estado int,
+FOREIGN KEY(album) REFERENCES ALBUM(id_album), FOREIGN KEY(estado) REFERENCES ESTADO(id_estado));
+CREATE TABLE LISTA_CANCION (id_lista_cancion INT IDENTITY PRIMARY KEY, lista INT, cancion INT, FOREIGN KEY(lista) 
+REFERENCES LISTA_REPRODUCCION(id_lista_reproduccion),FOREIGN KEY(cancion) REFERENCES CANCION(id_cancion));

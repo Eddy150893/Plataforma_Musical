@@ -1,0 +1,493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{31F703A2-97F9-464E-88D5-CB73199FCA30}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Plataforma_Musical</RootNamespace>
+    <AssemblyName>Plataforma_Musical</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Canciones\Animals.mp3" />
+    <Content Include="Canciones\Canserbero - De la vida como película y su tragedia comedia y ficción LETRA.mp3" />
+    <Content Include="Canciones\Canserbero - Jeremías 175 %28Video Oficial%29.mp3" />
+    <Content Include="Canciones\Canserbero - Llovía  Letra  HD %28720p%29  Álbum - Muerte  Link De La Canción.mp3" />
+    <Content Include="Canciones\Canserbero - Maquiavélico %28Letra%29 HD.mp3" />
+    <Content Include="Canciones\Canserbero - Pensando en ti %28VIDEO OFICIAL%29.mp3" />
+    <Content Include="Canciones\Cuando no es como deberia ser.mp3" />
+    <Content Include="Canciones\Cultura_Profetica_-_De_Antes_Nj6_bc3GnOE.mp3" />
+    <Content Include="Canciones\Cultura_profetica_-_La_complicidad_video_oficial_Fjg3n5nt550.mp3" />
+    <Content Include="Canciones\Cultura_Proftica_-_La_Espera_TxypVAeGGI4.mp3" />
+    <Content Include="Canciones\epico.mp3" />
+    <Content Include="Canciones\Lady_Gaga_-_Just_Dance_ft_Colby_ODonis_2Abk1jAONjw.mp3" />
+    <Content Include="Canciones\Lady_Gaga_-_LoveGame_1mB0tP1I-14.mp3" />
+    <Content Include="Canciones\Lady_Gaga_-_Paparazzi_d2smz_1L2_0.mp3" />
+    <Content Include="Canciones\Lady_Gaga_-_Poker_Face_bESGLojNYSo.mp3" />
+    <Content Include="Canciones\Los malaventurados no lloran.mp3" />
+    <Content Include="Canciones\Narcisista por excelencia.mp3" />
+    <Content Include="Canciones\Procedimientos para llegar a un comun acuerdo.mp3" />
+    <Content Include="Canciones\Tremor.mp3" />
+    <Content Include="Canciones\Un_Deseo_-_Cultura_Profetica_Ehv36Bpr3vI.mp3" />
+    <Content Include="Global.asax" />
+    <Content Include="images\demo\1.gif" />
+    <Content Include="images\demo\2.gif" />
+    <Content Include="images\demo\240x90.gif" />
+    <Content Include="images\demo\290x100.gif" />
+    <Content Include="images\demo\3.gif" />
+    <Content Include="images\demo\60x60.gif" />
+    <Content Include="images\demo\80x80.gif" />
+    <Content Include="images\demo\avatar.gif" />
+    <Content Include="images\demo\imgl.gif" />
+    <Content Include="images\demo\imgr.gif" />
+    <Content Include="images\demo\index.html" />
+    <Content Include="images\Imagenes_artistasUsac.png" />
+    <Content Include="images\index.html" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="scripts\jquery-3.3.1.js" />
+    <Content Include="scripts\jquery-3.3.1.min.js" />
+    <Content Include="scripts\jquery-3.3.1.slim.js" />
+    <Content Include="scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Vistas\Agregar_generos.aspx" />
+    <Content Include="Vistas\Albumes_Artistas.aspx" />
+    <Content Include="Vistas\Album_Canciones.aspx" />
+    <Content Include="Vistas\Artistas.aspx" />
+    <Content Include="Vistas\Artistas_eliminados.aspx" />
+    <Content Include="Vistas\css\pikaday.css" />
+    <Content Include="Vistas\Editar_noticia.aspx" />
+    <Content Include="Vistas\Favoritos.aspx" />
+    <Content Include="Vistas\Generos.aspx" />
+    <Content Include="Vistas\images\agregar_cancion.jpg" />
+    <Content Include="Vistas\images\albumes mas populares.jpg" />
+    <Content Include="Vistas\images\artistas.jpg" />
+    <Content Include="Vistas\images\demo\1.gif" />
+    <Content Include="Vistas\images\demo\2.gif" />
+    <Content Include="Vistas\images\demo\240x90.gif" />
+    <Content Include="Vistas\images\demo\290x100.gif" />
+    <Content Include="Vistas\images\demo\3.gif" />
+    <Content Include="Vistas\images\demo\60x60.gif" />
+    <Content Include="Vistas\images\demo\80x80.gif" />
+    <Content Include="Vistas\images\demo\avatar.gif" />
+    <Content Include="Vistas\images\demo\imgl.gif" />
+    <Content Include="Vistas\images\demo\imgr.gif" />
+    <Content Include="Vistas\images\demo\index.html" />
+    <Content Include="Vistas\images\generos.jpg" />
+    <Content Include="Vistas\images\generos_altenativo.jpg" />
+    <Content Include="Vistas\images\index.html" />
+    <Content Include="Vistas\images\lista.jpg" />
+    <Content Include="Vistas\images\lupa.png" />
+    <Content Include="Vistas\images\Musical.png" />
+    <Content Include="Vistas\images\noticias.jpg" />
+    <Content Include="Vistas\Informacion.aspx" />
+    <Content Include="Vistas\Informacion_album.aspx" />
+    <Content Include="Vistas\Iniciar_Sesion.aspx" />
+    <Content Include="Vistas\Iniciar_Sesion_Maestra.Master" />
+    <Content Include="Vistas\Inicio.aspx" />
+    <Content Include="Vistas\layout\images\index.html" />
+    <Content Include="Vistas\layout\images\next.png" />
+    <Content Include="Vistas\layout\images\prev.png" />
+    <Content Include="Vistas\layout\index.html" />
+    <Content Include="Vistas\layout\scripts\index.html" />
+    <Content Include="Vistas\layout\styles\featured_slide.css" />
+    <Content Include="Vistas\layout\styles\forms.css" />
+    <Content Include="Vistas\layout\styles\images\black_file.gif" />
+    <Content Include="Vistas\layout\styles\images\green_file.gif" />
+    <Content Include="Vistas\layout\styles\images\index.html" />
+    <Content Include="Vistas\layout\styles\index.html" />
+    <Content Include="Vistas\layout\styles\layout.css" />
+    <Content Include="Vistas\layout\styles\navi.css" />
+    <Content Include="Vistas\layout\styles\tables.css" />
+    <Content Include="Vistas\Novedades.aspx" />
+    <Content Include="Vistas\Nueva_Lista.aspx" />
+    <Content Include="Vistas\pages\full-width.html" />
+    <Content Include="Vistas\pages\index.html" />
+    <Content Include="Vistas\pages\style-demo.html" />
+    <Content Include="Vistas\Pagina_Maestra.Master" />
+    <Content Include="scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="scripts\jquery-3.3.1.min.map" />
+    <Content Include="Vistas\Pagina_Maestra_artista.master" />
+    <Content Include="Vistas\Pagina_Maestra_Busquedas.master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Vistas\layout\scripts\pikaday.js" />
+    <Content Include="Vistas\Publicar_album.aspx" />
+    <Content Include="Vistas\Publicar_genero.aspx" />
+    <Content Include="Vistas\Publicar_novedad.aspx" />
+    <Content Include="Vistas\Recuperar_contraseña.aspx" />
+    <Content Include="Vistas\Registrar_Artista.aspx" />
+    <Content Include="Vistas\Registrar_Usuario.aspx" />
+    <Content Include="Vistas\Registro_album.aspx" />
+    <Content Include="Vistas\Registro_novedades.aspx" />
+    <Content Include="Vistas\Usuarios\Consulta_usuarios.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controladores\AlbumControlador.cs" />
+    <Compile Include="Controladores\Album_favoritoControlador.cs" />
+    <Compile Include="Controladores\ArtistaControlador.cs" />
+    <Compile Include="Controladores\CancionControlador.cs" />
+    <Compile Include="Controladores\Cancion_favoritoControlador.cs" />
+    <Compile Include="Controladores\ComentariosControlador.cs" />
+    <Compile Include="Controladores\EstadoControlador.cs" />
+    <Compile Include="Controladores\Genero_artistaControlador.cs" />
+    <Compile Include="Controladores\Genero_musicalControlador.cs" />
+    <Compile Include="Controladores\Lista_cancionControlador.cs" />
+    <Compile Include="Controladores\Lista_reproduccionControlador.cs" />
+    <Compile Include="Controladores\MciPlayer.cs" />
+    <Compile Include="Controladores\NovedadesControlador.cs" />
+    <Compile Include="Controladores\PaisControlador.cs" />
+    <Compile Include="Controladores\Tipo_usuarioControlador.cs" />
+    <Compile Include="Controladores\UsuarioControlador.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Album_favoritoModelo.cs" />
+    <Compile Include="Modelos\Cancion_favoritoModelo.cs" />
+    <Compile Include="Modelos\ComentarioModelo.cs" />
+    <Compile Include="Modelos\NovedadesModelo.cs" />
+    <Compile Include="Vistas\Agregar_generos.aspx.cs">
+      <DependentUpon>Agregar_generos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Agregar_generos.aspx.designer.cs">
+      <DependentUpon>Agregar_generos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Albumes_Artistas.aspx.cs">
+      <DependentUpon>Albumes_Artistas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Albumes_Artistas.aspx.designer.cs">
+      <DependentUpon>Albumes_Artistas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Album_Canciones.aspx.cs">
+      <DependentUpon>Album_Canciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Album_Canciones.aspx.designer.cs">
+      <DependentUpon>Album_Canciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Artistas.aspx.cs">
+      <DependentUpon>Artistas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Artistas.aspx.designer.cs">
+      <DependentUpon>Artistas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Artistas_eliminados.aspx.cs">
+      <DependentUpon>Artistas_eliminados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Artistas_eliminados.aspx.designer.cs">
+      <DependentUpon>Artistas_eliminados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Editar_noticia.aspx.cs">
+      <DependentUpon>Editar_noticia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Editar_noticia.aspx.designer.cs">
+      <DependentUpon>Editar_noticia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Favoritos.aspx.cs">
+      <DependentUpon>Favoritos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Favoritos.aspx.designer.cs">
+      <DependentUpon>Favoritos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Generos.aspx.cs">
+      <DependentUpon>Generos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Generos.aspx.designer.cs">
+      <DependentUpon>Generos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Informacion.aspx.cs">
+      <DependentUpon>Informacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Informacion.aspx.designer.cs">
+      <DependentUpon>Informacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Informacion_album.aspx.cs">
+      <DependentUpon>Informacion_album.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Informacion_album.aspx.designer.cs">
+      <DependentUpon>Informacion_album.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Iniciar_Sesion.aspx.cs">
+      <DependentUpon>Iniciar_Sesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Iniciar_Sesion.aspx.designer.cs">
+      <DependentUpon>Iniciar_Sesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Iniciar_Sesion_Maestra.Master.cs">
+      <DependentUpon>Iniciar_Sesion_Maestra.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Iniciar_Sesion_Maestra.Master.designer.cs">
+      <DependentUpon>Iniciar_Sesion_Maestra.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\AlbumModelo.cs" />
+    <Compile Include="Modelos\ArtistaModelo.cs" />
+    <Compile Include="Modelos\CancionModelo.cs" />
+    <Compile Include="Modelos\Conexion.cs" />
+    <Compile Include="Modelos\EstadoModelo.cs" />
+    <Compile Include="Modelos\Genero_artistaModelo.cs" />
+    <Compile Include="Modelos\Genero_musicalModelo.cs" />
+    <Compile Include="Modelos\Lista_cancionModelo.cs" />
+    <Compile Include="Modelos\Lista_reproduccionModelo.cs" />
+    <Compile Include="Modelos\PaisModelo.cs" />
+    <Compile Include="Modelos\Tipo_usuarioModelo.cs" />
+    <Compile Include="Modelos\UsuarioModelo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Novedades.aspx.cs">
+      <DependentUpon>Novedades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Novedades.aspx.designer.cs">
+      <DependentUpon>Novedades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Nueva_Lista.aspx.cs">
+      <DependentUpon>Nueva_Lista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Nueva_Lista.aspx.designer.cs">
+      <DependentUpon>Nueva_Lista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Pagina_Maestra.Master.cs">
+      <DependentUpon>Pagina_Maestra.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Pagina_Maestra.Master.designer.cs">
+      <DependentUpon>Pagina_Maestra.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Pagina_Maestra_artista.master.cs">
+      <DependentUpon>Pagina_Maestra_artista.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Pagina_Maestra_artista.master.designer.cs">
+      <DependentUpon>Pagina_Maestra_artista.master</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Pagina_Maestra_Busquedas.master.cs">
+      <DependentUpon>Pagina_Maestra_Busquedas.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Pagina_Maestra_Busquedas.master.designer.cs">
+      <DependentUpon>Pagina_Maestra_Busquedas.master</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Publicar_album.aspx.cs">
+      <DependentUpon>Publicar_album.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Publicar_album.aspx.designer.cs">
+      <DependentUpon>Publicar_album.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Publicar_genero.aspx.cs">
+      <DependentUpon>Publicar_genero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Publicar_genero.aspx.designer.cs">
+      <DependentUpon>Publicar_genero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Publicar_novedad.aspx.cs">
+      <DependentUpon>Publicar_novedad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Publicar_novedad.aspx.designer.cs">
+      <DependentUpon>Publicar_novedad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Recuperar_contraseña.aspx.cs">
+      <DependentUpon>Recuperar_contraseña.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Recuperar_contraseña.aspx.designer.cs">
+      <DependentUpon>Recuperar_contraseña.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Registrar_Artista.aspx.cs">
+      <DependentUpon>Registrar_Artista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Registrar_Artista.aspx.designer.cs">
+      <DependentUpon>Registrar_Artista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Registrar_Usuario.aspx.cs">
+      <DependentUpon>Registrar_Usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Registrar_Usuario.aspx.designer.cs">
+      <DependentUpon>Registrar_Usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Registro_album.aspx.cs">
+      <DependentUpon>Registro_album.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Registro_album.aspx.designer.cs">
+      <DependentUpon>Registro_album.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Registro_novedades.aspx.cs">
+      <DependentUpon>Registro_novedades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Registro_novedades.aspx.designer.cs">
+      <DependentUpon>Registro_novedades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Usuarios\Consulta_usuarios.aspx.cs">
+      <DependentUpon>Consulta_usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Usuarios\Consulta_usuarios.aspx.designer.cs">
+      <DependentUpon>Consulta_usuarios.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\Imagenes_artistas\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7553</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:7553/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,24 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Vistas/Pagina_Maestra.Master" AutoEventWireup="true" CodeBehind="Pagina_Maestra_Busquedas.master.cs" Inherits="Plataforma_Musical.Vistas.Pagina_Maestra_Busquedas" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div style="height: 100px; padding-top=100px;">
+            <div class="wrapper col3">
+  <div id="container">
+    <div class="homepage">
+      <ul>
+        <li>
+            
+            <asp:TextBox ID="TextBox1" runat="server" Height="25px" Width="319px" BorderColor="#95AD19" CssClass="light"></asp:TextBox>
+            
+        </li>
+         
+        <li class="last">
+            <asp:ImageButton ID="ImageButton5" runat="server" Height="32px" ImageUrl="~/Vistas/images/lupa.png" Width="31px" />
+          </li>
+      </ul>
+      <br class="clear" />
+    </div>
+  </div>
+</div>
+         </div>
+    <asp:ContentPlaceHolder ID="Contenido" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>

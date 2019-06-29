@@ -1,0 +1,18 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Vistas/Pagina_Maestra.Master" AutoEventWireup="true" CodeBehind="Pagina_Maestra_artista.master.cs" Inherits="Plataforma_Musical.Vistas.Pagina_Maestra_artista" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div>
+        <table style="width: 100%">
+            <tr>
+                <td style="width: 400px">&nbsp;</td>
+                <td style="width: 414px">
+                    <asp:Button ID="btninformacion" runat="server" Text="Informacion" OnClick="btninformacion_Click" />
+                </td>
+                <td>
+                    <asp:Button ID="btnalbumes" runat="server" Text="Albumes" OnClick="btnalbumes_Click" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <asp:contentplaceholder runat="server" ID="Contenedor_artista"></asp:contentplaceholder>
+
+</asp:Content>

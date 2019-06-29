@@ -1,0 +1,95 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Pagina_Maestra.master.cs" Inherits="Plataforma_Musical.Vistas.Pagina_Maestra" %>
+
+
+<!DOCTYPE html >
+
+<html>
+<head runat="server">
+<title>Plataforma Musical</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="layout/scripts/jquery.jcarousel.pack.js"></script>
+<script type="text/javascript" src="layout/scripts/jquery.jcarousel.setup.js"></script>
+<link href="css/pikaday.css" rel="stylesheet" />
+<script src="layout/scripts/pikaday.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.js" type="text/javascript"></script>
+    <style type="text/css">
+        .circulo {
+            width:100px;
+            height:150px;
+            border-radius:50px;
+        }
+        #Imagen_artista {
+            cursor:pointer;
+        }
+        .a {
+    display:block; margin:0; padding:15px 20px; color:#999999; background-color:#333333;
+}
+        .homepage table{display:block; float:left; width:220px; margin:0 30px 0 0; padding:0;}
+    </style>
+</head>
+<body id="top">
+    <form id="form1" runat="server">
+<!-- ####################################################################################################### -->
+
+<div class="wrapper col1">
+  <div id="header">
+    <div id="logo">
+      <h1><a href="Inicio.aspx">Plataforma Musical</a></h1>
+      <p>Musica para Descubrir</p>
+    </div>
+    <div id="topnav">
+      <ul>
+        <li class="active"><a href="Inicio.aspx">Inicio</a></li>
+        <li>
+            <asp:HyperLink ID="artista" runat="server" CssClass="a" >Registrar Artista</asp:HyperLink>
+        </li>
+        <li><a href="Nueva_Lista.aspx">Nueva Lista</a></li>
+        <li><a href="pages/style-demo.html">Mis Listas</a></li>
+        <li><a href="Favoritos.aspx">Favoritos</a></li>
+        <li><a href="Novedades.aspx">Novedades</a></li>
+           <li><a href="#" id="menu_admin"  runat="server">Administrador</a>
+          <ul>
+            <li><a href="#">Gestion de Usuario</a></li>
+            <li><a href="Usuarios/Consulta_usuarios.aspx">Consultar Usuarios</a></li>
+            <li><a href="Agregar_generos.aspx">Registro Genero Musical</a></li>
+              <li><a href="#">Albumes eliminados</a></li>
+            <li>
+                <asp:HyperLink ID="HyperLink3" runat="server" CssClass="a" NavigateUrl="~/Vistas/Artistas_eliminados.aspx" >Artistas Eliminados</asp:HyperLink>
+            </li>
+              <li>
+                  <asp:HyperLink ID="HyperLink2" runat="server" CssClass="a" NavigateUrl="~/Vistas/Registro_novedades.aspx" >Registro de Novedades</asp:HyperLink>
+              </li>
+          </ul>
+        </li>
+        <li>
+            <asp:HyperLink ID="HyperLink1" runat="server" CssClass="a" NavigateUrl="~/Vistas/Iniciar_Sesion.aspx" >Salir</asp:HyperLink>
+        </li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+
+<!-- ####################################################################################################### -->
+<div class="wrapper col3">
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+
+    </div>
+<!-- ####################################################################################################### -->
+
+<!-- ####################################################################################################### -->
+<div class="wrapper col5">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">PlataformaMusical.com</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">C#</a></p>
+    <br class="clear" />
+  </div>
+</div>
+    </form>
+</body>
+</html>
